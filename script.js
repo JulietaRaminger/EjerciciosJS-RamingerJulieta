@@ -30,22 +30,24 @@ function calcularCostoTotal(precioProducto, cantidad) {
   return costoTotal;
 }
 
-numProductos = parseInt(prompt('Ingrese la cantidad de productos a comprar:'));
+numProductos = parseInt(prompt("Ingrese la cantidad de productos a comprar:"));
 
 for (let i = 1; i <= numProductos; i++) {
-  nombreProducto = prompt('Ingrese el nombre del producto');
-
-  precioProducto = parseFloat(prompt('Ingrese el precio del producto'));
-
-  if (isNaN(precioProducto) || precioProducto <= 0) {
-    alert('Por favor, ingrese un precio válido y mayor que cero.');
-  }
+  nombreProducto = prompt("Ingrese el nombre del producto");
 
   do {
-    cantidad = parseInt(prompt('Ingrese la cantidad a comprar'));
+    precioProducto = parseFloat(prompt("Ingrese el precio del producto"));
+
+    if (isNaN(precioProducto) || precioProducto <= 0) {
+      alert("Por favor, ingrese un precio válido y mayor que cero.");
+    }
+  } while (isNaN(precioProducto) || precioProducto <= 0);
+
+  do {
+    cantidad = parseInt(prompt("Ingrese la cantidad a comprar."));
 
     if (isNaN(cantidad) || cantidad <= 0) {
-      alert('Por favor, ingrese una cantidad válida y mayor que cero.');
+      alert("Por favor, ingrese una cantidad válida y mayor que cero.");
     }
   } while (isNaN(cantidad) || cantidad <= 0);
 
@@ -53,16 +55,16 @@ for (let i = 1; i <= numProductos; i++) {
 
   if (cantidad < 10) {
     alert(
-      'Estos productos no aplican descuento. El total es: $' +
+      "Estos productos no aplican descuento. El total es: $" +
         costoConDescuento.toFixed(2)
     );
   } else {
     alert(
-      'El costo total con descuento es de: $' + costoConDescuento.toFixed(2)
+      "El costo total con descuento es de: $" + costoConDescuento.toFixed(2)
     );
   }
 
   totalCompra += costoConDescuento;
 }
 
-alert('El total de la compra es: $' + totalCompra.toFixed(2));
+alert("El total de la compra es: $" + totalCompra.toFixed(2));
