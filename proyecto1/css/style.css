@@ -1,0 +1,17 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: black;
+}
+
+header {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 2em;
+  text-shadow: 1px 1px 0px #2a2e30;
+  margin-bottom: 20px;
+  color: #e278c8;
+  font-weight: 900;
+}
