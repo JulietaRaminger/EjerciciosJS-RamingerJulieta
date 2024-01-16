@@ -87,7 +87,7 @@ const productos = [
   
         const respuesta = prompt(
           "¿Desea seguir comprando? (si/no)"
-        ).toLowerCase().includes;
+        ).toLowerCase();
         continuarComprando = respuesta === "si";
       }
   
