@@ -1,3 +1,19 @@
+/*
+📌 1- En un array poner mis productos.
+📌 2- Declarar mi Class de carrito de compras
+📌 3- Mostrar al usuario mis productos.
+📌 4- Hacer que el usuario pueda elegir el producto por ID.
+📌 5- Alertar si eligio un ID que no existe
+📌 6- Alertar si no hay suficiente stock
+📌 7- Hacer que mi stock disminuya ya cuando se realizo la compra de ese producto.
+📌 8- Mostrar el producto que elijio y su precio.
+📌 9- Hacer calculo del total de la compra
+📌 10- Hacer prompt para que el usuario pueda iterar con la pagina
+📌 11- Hacer el bucle para que elija el usuario si seguir comprando o no. si es si el bucle se repite
+📌 12- Mostrar el total de la compra o si no se realizo ninguna compra.
+*/
+
+
 const productos = [
     { id: 1, nombre: "Angelitos", precio: 50, stock: 10 },
     { id: 2, nombre: "Almohadones", precio: 100, stock: 8 },
@@ -61,6 +77,8 @@ const productos = [
       );
     }
   
+    //Empiezo a agregar los Prompt para que el usuario pueda iterar con la pagina.
+
     realizarCompra() {
       this.mostrarProductosDisponibles();
   
